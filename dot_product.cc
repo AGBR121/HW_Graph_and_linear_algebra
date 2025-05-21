@@ -4,14 +4,14 @@
 
 using namespace std;
 
-int productoPunto(const vector<int>& v1, const vector<int>& v2) {
+int dotProduct(const vector<int>& v1, const vector<int>& v2) {
     assert(v1.size() == v2.size() && "Los vectores deben tener la misma longitud");
 
-    int resultado = 0;
+    int result = 0;
     for (size_t i = 0; i < v1.size(); ++i) {
-        resultado += v1[i] * v2[i];
+        result += v1[i] * v2[i];
     }
-    return resultado;
+    return result;
 }
 
 int main() {
@@ -23,9 +23,9 @@ int main() {
     cout << "\nVector 2: ";
     for (int x : vector2) cout << x << " ";
 
-    int resultado = productoPunto(vector1, vector2);
+    int result = dotProduct(vector1, vector2);
 
-    cout << "\n\nEl producto punto de los dos vectores es: " << resultado << endl;
+    cout << "\n\nEl producto punto de los dos vectores es: " << result << endl;
 
     return 0;
 }
