@@ -1,0 +1,31 @@
+#include <iostream>
+#include <vector>
+#include<cassert>
+
+using namespace std;
+
+int productoPunto(const vector<int>& v1, const vector<int>& v2) {
+    assert(v1.size() == v2.size() && "Los vectores deben tener la misma longitud");
+
+    int resultado = 0;
+    for (size_t i = 0; i < v1.size(); ++i) {
+        resultado += v1[i] * v2[i];
+    }
+    return resultado;
+}
+
+int main() {
+    vector<int> vector1 = {1, 2, 3, 7};
+    vector<int> vector2 = {4, 5, 6, 8};
+
+    cout << "Vector 1: ";
+    for (int x : vector1) cout << x << " ";
+    cout << "\nVector 2: ";
+    for (int x : vector2) cout << x << " ";
+
+    int resultado = productoPunto(vector1, vector2);
+
+    cout << "\n\nEl producto punto de los dos vectores es: " << resultado << endl;
+
+    return 0;
+}
